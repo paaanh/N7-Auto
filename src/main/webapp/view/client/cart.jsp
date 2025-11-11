@@ -1,8 +1,3 @@
-<%-- 
-    Document   : cart.jsp
-    Updated by : ChatGPT Assistant
-    Purpose    : Hiển thị giỏ hàng (có kiểm tra null + fix lỗi ảnh)
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
