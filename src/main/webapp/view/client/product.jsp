@@ -27,40 +27,49 @@
 
 <!-- Product category -->
 <section id="aa-product-category" style="background:#fff;">
-  <div class="container-fluid" style="max-width: 95%; padding: 20px 40px;">
+  <div class="container-fluid" style="max-width:95%; padding:20px 40px;">
     <div class="row">
 
-      <!-- Product list (mở rộng ra nhiều cột hơn) -->
-      <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3" style="padding-right: 30px;">
+      <!-- Product list -->
+      <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3" style="padding-right:30px;">
         <div class="aa-product-catg-content">
           <div class="aa-product-catg-body">
-            <ul class="aa-product-catg" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: flex-start;">
+
+            <!-- Lưới 3 cột cố định -->
+            <ul class="aa-product-catg" style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+                list-style: none;
+                padding: 0;
+                margin: 0 auto;
+              ">
 
               <c:if test="${empty productlist}">
-                <p style="margin-left: 30px">Chưa có sản phẩm!</p>
+                <p style="margin-left:30px;">Chưa có sản phẩm!</p>
               </c:if>
 
               <c:forEach items="${productlist}" var="product">
-                <li style="flex: 1 1 calc(25% - 24px); list-style: none; border: 1px solid #eee; border-radius: 8px; padding: 10px; background: #fff; transition: 0.3s;">
-                  <figure style="margin: 0; text-align: center;">
+                <li style="border:1px solid #eee; border-radius:10px; background:#fff; padding:10px; transition:0.3s; position:relative;">
+                  <figure style="margin:0; text-align:center;">
                     <!-- Ảnh sản phẩm -->
                     <a class="aa-product-img"
                        href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">
                       <img src="${pageContext.request.contextPath}/view/client/assets/images/products/${product.image_link}"
                            alt="${product.name}"
-                           style="width: 100%; height: 240px; object-fit: cover; border-radius: 6px;"
+                           style="width:100%; height:240px; object-fit:cover; border-radius:6px;"
                            onerror="this.src='${pageContext.request.contextPath}/view/client/assets/images/logo.png'">
                     </a>
 
                     <!-- Nút thêm giỏ hàng -->
                     <a class="aa-add-card-btn"
                        href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"
-                       style="display: inline-block; margin-top: 8px; font-weight: 600;">
+                       style="display:inline-block; margin-top:8px; font-weight:600;">
                       <span class="fa fa-shopping-cart"></span> Thêm vào giỏ hàng
                     </a>
 
-                    <figcaption style="margin-top: 8px;">
-                      <h4 class="aa-product-title" style="font-size: 16px; font-weight: 700;">
+                    <figcaption style="margin-top:8px;">
+                      <h4 class="aa-product-title" style="font-size:16px; font-weight:700;">
                         <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">
                           ${product.name}
                         </a>
@@ -92,16 +101,20 @@
                 </li>
               </c:forEach>
 
+              <!-- Thêm ô trống để giữ 3 cột luôn đều -->
+              <c:forEach begin="1" end="${3 - fn:length(productlist)}" var="i">
+                <li style="border:none; background:transparent;"></li>
+              </c:forEach>
+
             </ul>
+
           </div>
         </div>
       </div>
 
       <!-- Sidebar -->
-      <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9" style="background:#fafafa; padding: 20px; border-radius: 10px;">
+      <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9" style="background:#fafafa; padding:20px; border-radius:10px;">
         <aside class="aa-sidebar">
-
-          <!-- Danh mục -->
           <div class="aa-sidebar-widget">
             <h3>Danh mục</h3>
             <ul class="aa-catg-nav">
@@ -113,15 +126,13 @@
             </ul>
           </div>
 
-          <!-- Sản phẩm gần đây -->
           <div class="aa-sidebar-widget">
             <h3>Sản phẩm gần đây</h3>
             <div class="aa-recently-views">
               <ul>
                 <c:forEach items="${productlist}" var="product" end="2">
                   <li style="margin-bottom:12px;">
-                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"
-                       class="aa-cartbox-img">
+                    <a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}" class="aa-cartbox-img">
                       <img alt="${product.name}"
                            src="${pageContext.request.contextPath}/view/client/assets/images/products/${product.image_link}"
                            style="width:70px; height:70px; object-fit:cover; border-radius:4px; margin-right:10px;"
@@ -149,7 +160,6 @@
               </ul>
             </div>
           </div>
-
         </aside>
       </div>
 
