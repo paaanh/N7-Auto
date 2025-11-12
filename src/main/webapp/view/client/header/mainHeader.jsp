@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Nông sản 24h - Sự lựa chọn tin cậy</title>
+    <title>N7- Auto - Sự lựa chọn tin cậy</title>
     
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -41,52 +41,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
   </head>
     <body>
-        <style>
-          #aa-product-category {
-            background-color: #fafafa;
-            padding: 40px 0;
-          }
-          #aa-product-category .container {
-            max-width: 900px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding: 40px 60px;
-            line-height: 1.7;
-            color: #333;
-            font-size: 16px;
-          }
-          #aa-product-category h1 {
-            text-transform: uppercase;
-          }
-          #aa-product-category ul {
-            margin: 10px 0 20px 25px;
-          }
-          #aa-product-category strong {
-            color: #222;
-          }
-          #aa-product-category a {
-            color: #007bff;
-            text-decoration: none;
-          }
-          #aa-product-category a:hover {
-            text-decoration: underline;
-          }
-        </style>
-
+		    <style>
+		  #aa-product-category {
+		    background-color: #fafafa;
+		    padding: 40px 0;
+		  }
+		  #aa-product-category .container {
+		    max-width: 900px;
+		    background: #fff;
+		    border-radius: 12px;
+		    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+		    padding: 40px 60px;
+		    line-height: 1.7;
+		    color: #333;
+		    font-size: 16px;
+		  }
+		  #aa-product-category h1 {
+		    text-transform: uppercase;
+		  }
+		  #aa-product-category ul {
+		    margin: 10px 0 20px 25px;
+		  }
+		  #aa-product-category strong {
+		    color: #222;
+		  }
+		  #aa-product-category a {
+		    color: #007bff;
+		    text-decoration: none;
+		  }
+		</style>
+		    
+        
           <header id="aa-header">
             <jsp:include page = "topHeader.jsp" flush = "true" />
-          <!-- start header bottom  -->
-             <jsp:include page = "bottomHeader.jsp" flush = "true" />
+          
           <!-- / header bottom  -->
         </header>
           
