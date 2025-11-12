@@ -1,62 +1,48 @@
-<%-- 
-    Document   : topHeader
-    Created on : May 5, 2020, 11:13:25 PM
-    Author     : LENOVO
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<c:url value = "/view/client/assets" var="url"/>
-         <!-- start header top  -->
-    <div class="aa-header-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-header-top-area">
-              <!-- start header top left -->
-              <div class="aa-header-top-left">
-                <div class="cellphone hidden-xs">
-                  <p><span class="fas fa-home"></span>Website bán hàng nông sản</p>
-                </div>
-                <!-- start language -->
-                <div class="aa-language">
-                  <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <img src="${url}/img/flag/vietnam.png" alt="english flag">Việt Nam
-                    </a>
-                   
-                  </div>
-                </div>
-                <!-- / language -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-                <!-- start cellphone -->
-<!--                <div class="cellphone hidden-xs">
-                  <p><span class="fa fa-phone"></span>00-62-658-658</p>
-                </div>-->
-                <!-- / cellphone -->
-              </div>
-              <!-- / header top left -->
-              <div class="aa-header-top-right">
-                <ul class="aa-head-top-nav-right">
-               
-	                <c:if test="${sessionScope.username != null}">
-	                 <li>
-						<a><strong>Chào</strong> ${username }</a>
-					</li>
-					<li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/logout">Đăng xuất</a></li>
-					</c:if>
-				
-				 <c:if test="${sessionScope.username == null}">
-	                  <li class="hidden-xs"><a href="${pageContext.request.contextPath}/view/client/register">Đăng ký</a></li>
-	                  <li><a href="${pageContext.request.contextPath}/view/client/login">Đăng nhập</a></li>
-	              </c:if>
-                  
-                   <!--  data-toggle="modal" data-target="#login-modal" -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+<div style="
+  background-color:#1565c0;
+  padding:10px 0;
+  color:white;
+  font-weight:600;
+  position:relative;">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      
+      <!-- Logo -->
+      <div style="display:flex; align-items:center; gap:10px;">
+        <a href="${pageContext.request.contextPath}/">
+          <img src="${pageContext.request.contextPath}/view/client/assets/images/logo.png"
+               alt="N7 Auto"
+               style="height:55px; border-radius:8px;">
+        </a>
+        <h2 style="color:#00ffff; font-weight:800; text-shadow:0 0 8px #00ffff; margin:0;">
+          N7<br>AUTO
+        </h2>
       </div>
+
+      <!-- Đăng ký / Đăng nhập + Giỏ hàng -->
+      <div style="display:flex; align-items:center; gap:15px;">
+        <a href="${pageContext.request.contextPath}/view/client/register"
+           style="color:white;">Đăng ký</a>
+        <a href="${pageContext.request.contextPath}/view/client/login"
+           style="color:white;">Đăng nhập</a>
+
+        <a href="${pageContext.request.contextPath}/view/client/cart"
+           style="color:white; position:relative;">
+          <span class="fa fa-shopping-cart" style="font-size:20px;"></span>
+          <c:if test="${sessionScope.cart != null}">
+            <span style="position:absolute; top:-8px; right:-10px; background:red; color:white;
+                         font-size:12px; border-radius:50%; padding:2px 6px;">
+              ${sessionScope.cart.size()}
+            </span>
+          </c:if>
+          <span style="margin-left:4px;">Giỏ hàng</span>
+        </a>
+      </div>
+
     </div>
-    <!-- / header top  -->
+  </div>
+</div>
+
