@@ -32,7 +32,7 @@ public class ProductSeachByNameController extends HttpServlet {
                     p.setPrice(df.format(finalPrice));
                 } catch (Exception ignored) {}
             }
-            req.setAttribute("productlist1", list);
+            req.setAttribute("productlist", list);
             RequestDispatcher rd = req.getRequestDispatcher("/view/client/product.jsp");
             rd.forward(req, resp);
         } catch (Exception e) {
