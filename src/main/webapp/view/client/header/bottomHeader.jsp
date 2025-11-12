@@ -11,35 +11,42 @@
         <div class="aa-header-bottom-area">
 
           <!-- logo -->
-          <div class="aa-logo">
-            <a href="${pageContext.request.contextPath}/">
-              <img src="${url}/images/logo.png" alt="logo img" width="100%">
-            </a>
-          </div>
+         <div class="aa-logo" style="display: flex;align-items: center;justify-content: center;gap: 20px;">
+			  <a href="${pageContext.request.contextPath}/">
+			    <img src="${url}/images/logo.png" alt="logo img" style="width: 100px; border-radius: 8px;">
+			  </a>
+			
+			  <p style="
+			    color: #00ffff;
+			    font-size: 36px;
+			    font-weight: bold;
+			    text-shadow:
+			      0 0 5px #00ffff,
+			      0 0 10px #00ffff,
+			      0 0 20px #00ffff,
+			      0 0 40px #00ffff;
+			    font-family: 'Orbitron', sans-serif;
+			    margin: 0;
+			  ">
+			    N7 AUTO
+			  </p>
+		</div>
 
+          
+	
           <!-- Shipping service -->
           <div class="aa-shipping-box">
             <a class="aa-shipping-boxsmall">
-              <span class="aa-shipping-boxsmall-icon fas fa-shipping-fast"></span>
               <span class="aa-shipping-box-text">
-                <div class="aa-shipping-title">Miễn phí vận chuyển</div>
-                <div>Khu vực TP HCM</div>
-              </span>
-            </a>
-
-            <a class="aa-shipping-boxsmall">
-              <span class="aa-shipping-boxsmall-icon fas fa-phone"></span>
-              <span class="aa-shipping-box-text">
-                <div class="aa-shipping-title">Hỗ trợ: 037.7026.186</div>
-                <div>Tư vấn 24/7 miễn phí</div>
-              </span>
-            </a>
-
-            <a class="aa-shipping-boxsmall">
-              <span class="aa-shipping-boxsmall-icon fas fa-truck"></span>
-              <span class="aa-shipping-box-text">
-                <div class="aa-shipping-title">Giao hàng toàn quốc</div>
-                <div>Đảm bảo uy tín, chất lượng</div>
+                <div class="aa-shipping-title" 
+     				style="font-family: 'Archivo Black', sans-serif;
+		            font-size: 30px;
+		            font-weight: bold;
+		            text-align: center;
+		            color: #feee91;
+		            text-shadow: 0 0 10px #00ffff, 0 0 20px #00cccc;">
+		           	Xe giá tốt, chốt mua nhanh!
+				</div>
               </span>
             </a>
           </div>
@@ -321,5 +328,3 @@
     text-decoration: none;
   }
 </style>
-
-
