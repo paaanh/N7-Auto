@@ -50,7 +50,39 @@
   
   </head>
     <body>
-        
+        <style>
+          #aa-product-category {
+            background-color: #fafafa;
+            padding: 40px 0;
+          }
+          #aa-product-category .container {
+            max-width: 900px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 40px 60px;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+          }
+          #aa-product-category h1 {
+            text-transform: uppercase;
+          }
+          #aa-product-category ul {
+            margin: 10px 0 20px 25px;
+          }
+          #aa-product-category strong {
+            color: #222;
+          }
+          #aa-product-category a {
+            color: #007bff;
+            text-decoration: none;
+          }
+          #aa-product-category a:hover {
+            text-decoration: underline;
+          }
+        </style>
+
           <header id="aa-header">
             <jsp:include page = "topHeader.jsp" flush = "true" />
           <!-- start header bottom  -->
