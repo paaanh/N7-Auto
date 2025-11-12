@@ -14,9 +14,6 @@
 
 <!-- Banner -->
 <section id="aa-catg-head-banner">
-  <img src="${pageContext.request.contextPath}/view/client/assets/images/4.jpg"
-       alt="banner sản phẩm" 
-       style="width:100%;object-fit:cover;max-height:300px;">
   <div class="aa-catg-head-banner-area">
     <div class="container">
       <div class="aa-catg-head-banner-content">
