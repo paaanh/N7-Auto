@@ -21,5 +21,5 @@ public interface ProductDao {
 
 	List<Product> searchByName(String productName);
 
-
+	List<Product> getProductByIdCate(int catalogId);
 }
