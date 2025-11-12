@@ -7,9 +7,6 @@
 
 <!-- Banner -->
 <section id="aa-catg-head-banner">
-  <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.jpg"
-       alt="banner xe hơi"
-       style="width:100%;max-height:300px;object-fit:cover;">
   <div class="aa-catg-head-banner-area">
     <div class="container">
       <div class="aa-catg-head-banner-content">
