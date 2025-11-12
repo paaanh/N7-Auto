@@ -10,11 +10,7 @@
   <div class="aa-catg-head-banner-area">
     <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Hình thức thanh toán</h2>
-        <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>  
-          <li style="color:#fff">Hình thức thanh toán</li>       
-        </ol>
+        
       </div>
     </div>
   </div>
